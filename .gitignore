@@ -1,0 +1,8 @@
+cmake-*/
+vsbuild-*/
+build/
+\.idea/workspace\.xml
+\.idea/\.name
+.DS_Store
+.vs
+.vscode/

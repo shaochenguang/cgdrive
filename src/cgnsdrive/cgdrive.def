@@ -1,0 +1,9 @@
+; CGDRIVE.def : Declares the module parameters.
+LIBRARY      "CGDRIVE.DLL"
+
+EXPORTS
+	DllCanUnloadNow     PRIVATE
+	DllGetClassObject   PRIVATE
+	DllRegisterServer   PRIVATE
+	DllUnregisterServer	PRIVATE
+	DllInstall			PRIVATE
