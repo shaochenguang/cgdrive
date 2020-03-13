@@ -75,6 +75,21 @@ STDAPI DllUnregisterServer(void)
 STDAPI DllInstall(BOOL bInstall, LPCWSTR pszCmdLine)
 {
     LOGDEBUG << "call DllInstall";
+    HRESULT hr = E_FAIL;
+    static const WCHAR szUser[] = TEXT("user");
+    static const WCHAR szUpdate[] = TEXT("rotation");
+    if (pszCmdLine != NULL)
+    {
+        if (_wcsnicmp(pszCmdLine, szUser, _countof(szUser)) == 0)
+        {
+            ATL::AtlSetPerUserRegistration(true);
+            LOGDEBUG << "call AtlSetPerUserRegistration";
+        }
+        else if (_wcsnicmp(pszCmdLine, szUpdate, _countof(szUpdate)) == 0)
+        {
+
+        }
+    }
     return S_OK;
 }
 
